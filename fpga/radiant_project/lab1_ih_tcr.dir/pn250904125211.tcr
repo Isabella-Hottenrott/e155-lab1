@@ -1,0 +1,13 @@
+#Start recording tcl command: 9/4/2025 12:43:28
+#Project Location: C:/Users/ihottenrott/lab1_ih; Project name: lab1_ih
+prj_create -name "lab1_ih" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "C:/Users/ihottenrott/lab1_ih/source/impl_1/lab1_ih.sv"
+prj_add_source "C:/Users/ihottenrott/lab1_ih/source/impl_1/segments.sv"
+prj_add_source "C:/Users/ihottenrott/lab1_ih/source/impl_1/clock_div.sv"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_add_source "C:/Users/ihottenrott/lab1_ih/pinout.pdc"
+prj_enable_source "C:/Users/ihottenrott/lab1_ih/pinout.pdc"
+prj_run Export -impl impl_1
+#Stop recording: 9/4/2025 12:52:11

@@ -1,0 +1,23 @@
+// Isabella Hottenrott
+// tenth_clock.sv
+// ihottenrott@g.hmc.edu
+// 1/9/2025
+// Module containing Verilog code for clock division to 2.4 Hz.
+
+module clock_div(input logic int_osc,
+					output logic led_hz);
+	
+		logic [24:0] counter;
+	 
+	  
+	   always_ff @(posedge int_osc) begin
+        if (counter == 25'd9_999_999) begin
+            counter <= 25'd0;
+            led_hz <= ~led_hz; 
+        end else begin
+            counter <= counter + 1;
+        end
+    end
+
+
+endmodule
