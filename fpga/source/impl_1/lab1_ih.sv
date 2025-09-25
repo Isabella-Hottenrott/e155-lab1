@@ -1,7 +1,7 @@
 // Isabella Hottenrott
 // lab1_ih.sv
 // ihottenrott@g.hmc.edu
-// 1/9/2025
+// 25/9/2025
 // Top level module for E155 Lab 1: FPGA and MCU Setup and Testing
 
 

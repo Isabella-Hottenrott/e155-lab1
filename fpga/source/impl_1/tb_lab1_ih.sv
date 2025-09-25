@@ -1,8 +1,8 @@
 // Isabella Hottenrott
 // tb_lab1_ih.sv
 // ihottenrott@g.hmc.edu
-// 9/9/2025
-// Testbench for the clock divider to 60 Hz for E155 Lab 2
+// 25/9/2025
+// Testbench for lab1_ih.sv module, Top level module for Lab 1
 
 module tb_lab1_ih();
     logic clk, reset, test_int_osc, int_osc, led_hz;

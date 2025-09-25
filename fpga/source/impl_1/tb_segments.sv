@@ -1,8 +1,8 @@
 // Isabella Hottenrott
 // tb_segments.sv
 // ihottenrott@g.hmc.edu
-// 9/9/2025
-// Testbench for the segments module for E155 Lab 2
+// 25/9/2025
+// Testbench for the segments module for E155 Lab 1
 
 module tb_segments();
 	logic clk, reset;
