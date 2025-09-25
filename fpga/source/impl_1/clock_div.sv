@@ -10,8 +10,11 @@ module clock_div(input logic int_osc,
 		logic [24:0] counter;
 	 
 	  
-	   always_ff @(posedge int_osc) begin
-        if (counter == 25'd9_999_999) begin
+	   always_ff @(posedge int_osc, posedge reset) begin
+        if (reset) begin
+            counter <= 25'd0;
+        end
+        else if (counter == 25'd9_999_999) begin
             counter <= 25'd0;
             led_hz <= ~led_hz; 
         end else begin
