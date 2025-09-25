@@ -5,15 +5,17 @@
 // Module containing Verilog code for clock division to 2.4 Hz.
 
 module clock_div(input logic int_osc,
+					input logic reset,
 					output logic led_hz);
 	
 		logic [24:0] counter;
 	 
 	  
-	   always_ff @(posedge int_osc, posedge reset) begin
-        if (reset) begin
-            counter <= 25'd0;
-        end
+	   always_ff @(posedge int_osc, negedge reset) begin
+		if (reset) begin
+			counter <= 25'b0;
+			led_hz <= 1'b0;
+			end
         else if (counter == 25'd9_999_999) begin
             counter <= 25'd0;
             led_hz <= ~led_hz; 
